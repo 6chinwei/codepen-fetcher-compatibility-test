@@ -1,0 +1,38 @@
+name: Compatibility Test for `codepen-fetcher`
+
+on:
+  schedule:
+    - cron: '0 1 * * 1' # Every Monday at 9 AM (UTC+8)
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  test-node-16:
+    name: Test on Node 16
+    uses: ./.github/workflows/install-and-test.yaml
+    with:
+      node_version: '16'
+
+  test-node-18:
+    name: Test on Node 18
+    uses: ./.github/workflows/install-and-test.yaml
+    with:
+      node_version: '18'
+
+  test-node-20:
+    name: Test on Node 20
+    uses: ./.github/workflows/install-and-test.yaml
+    with:
+      node_version: '20'
+
+  test-node-22:
+    name: Test on Node 22
+    uses: ./.github/workflows/install-and-test.yaml
+    with:
+      node_version: '22'
+
+  test-node-24:
+    name: Test on Node 24
+    uses: ./.github/workflows/install-and-test.yaml
+    with:
+      node_version: '24'
