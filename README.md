@@ -1,8 +1,21 @@
 # codepen-fetcher-compatibility-test
 
-The script to test the compatibility of the latest `codepen-fetcher` package from NPM with various Node.js versions.
+Test the compatibility of the latest [codepen-fetcher](https://github.com/6chinwei/codepen-fetcher) with different Node.js versions.
 
-## Usage
+### Test results
+
+> [Workflow runs](https://github.com/6chinwei/codepen-fetcher-compatibility-test/actions/workflows/compatibility-test.yaml)
+
+| Version     | Result |
+|-------------|--------|
+| Node.js 16  | ❌      |
+| Node.js 18  | ✅      |
+| Node.js 20  | ✅      |
+| Node.js 22  | ✅      |
+| Node.js 24  | ✅      |
+
+
+### Manual Testing
 ```sh
 $ node -v
 
