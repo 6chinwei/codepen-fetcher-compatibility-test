@@ -1,10 +1,13 @@
 name: Compatibility Test for `codepen-fetcher`
 
 on:
-  schedule:
-    - cron: '0 1 * * 1' # Every Monday at 9 AM (UTC+8)
-  workflow_dispatch:
-  workflow_call:
+  # schedule:
+  #   - cron: '0 1 * * 1' # Every Monday at 9 AM (UTC+8)
+  # workflow_dispatch:
+  # workflow_call:
+  push:
+    branches:
+      - test-ci
 
 jobs:
   test-node:
