@@ -1,10 +1,13 @@
 name: Compatibility Test for `codepen-fetcher`
 
 on:
-  schedule:
-    - cron: '0 1 * * 1' # Every Monday at 9 AM (UTC+8)
-  workflow_dispatch:
-  workflow_call:
+  # schedule:
+  #   - cron: '0 1 * * 1' # Every Monday at 9 AM (UTC+8)
+  # workflow_dispatch:
+  # workflow_call:
+  push:
+    branches:
+      - test/node-26
 
 jobs:
   test-node:
@@ -12,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node_version: ['16', '18', '20', '22', '24']
+        node_version: ['16', '18', '20', '22', '24', '26']
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
