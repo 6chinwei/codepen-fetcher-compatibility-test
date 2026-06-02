@@ -26,7 +26,7 @@ jobs:
       - run: node -v
       - name: Install `codepen-fetcher`
         run: |
-          npm install codepen-fetcher --no-save
+          npm install codepen-fetcher@beta --no-save
           echo "Installed version: "
           node -p "require('codepen-fetcher/package.json').version"
       - run: node index.js
